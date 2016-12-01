@@ -1,0 +1,30 @@
+body {
+  background-color: #579e62;
+}
+
+.goodPeeps {
+  border: 10px solid transparent;
+  padding: 15px;
+  margin: 10px;
+  /*border-image: url(/assets/0a6d7537e0fb9127801f20546851b75b.jpg) 30 stretch;*/
+}
+
+.Angelic {
+  border-image: url(/assets/5ea2aa1cdbc286a8626edb12dd3e2594.gif) 30 stretch;
+}
+
+.Great {
+  border-image: url(/assets/0a6d7537e0fb9127801f20546851b75b.jpg) 30 stretch;
+}
+
+.NotTooBad {
+  background-color: #6cb573;
+}
+
+.Weak {
+  background-color: #ec9f39;
+}
+
+.DamnedToHell {
+  background-color: #e46161;
+}

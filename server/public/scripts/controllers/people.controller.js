@@ -2,7 +2,7 @@ myApp.controller('PeopleController', ['$http', function($http) {
     var self = this;
     self.people = [];
     self.newPerson = {};
-    self.niceLevels = [1,2,3,4,5];
+    self.niceLevels = ['Angelic', 'Great', 'NotTooBad', 'Weak', 'DamnedToHell'];
 
     // Start app
     getData();
