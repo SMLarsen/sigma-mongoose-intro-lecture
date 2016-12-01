@@ -48,9 +48,9 @@ myApp.controller('PeopleController', ['$http', function($http) {
     };
 
     // update person
-    self.updatePerson = function(id) {
+    self.updatePerson = function(id, person) {
       console.log('update person');
-      var data = {location: 'NOT Minneapolis'};
+      var data = person;
       $http.put('/person/' + id, data)
         .then(function(response) {
           getData();

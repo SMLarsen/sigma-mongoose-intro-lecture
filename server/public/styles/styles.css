@@ -2,6 +2,19 @@ body {
   background-color: #579e62;
 }
 
+.peepLabel {
+  width: 60px;
+  margin-right: 10px;
+}
+
+.peepButtons {
+  margin-top: 20px;
+}
+
+.peepButton {
+  margin-left: 40px;
+}
+
 .goodPeeps {
   border: 10px solid transparent;
   padding: 15px;

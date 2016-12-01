@@ -35,7 +35,7 @@ router.put('/:id', function(req, res) {
   console.log('new location: ', req.body);
   Person.findByIdAndUpdate(
     { _id: req.params.id },
-    { $set: { location: req.body.location } },
+    { $set: { location: req.body.location, birthDate: req.body.birthDate, nicenessLevel: req.body.nicenessLevel } },
     function(err, data) {
       if(err) {
         console.log('Put ERR: ', err);
@@ -45,7 +45,7 @@ router.put('/:id', function(req, res) {
       }
     }
 
-  )
+  );
 });
 
 router.delete('/:id', function(req, res) {
@@ -61,7 +61,7 @@ router.delete('/:id', function(req, res) {
       }
     }
 
-  )
+  );
 });
 
 
