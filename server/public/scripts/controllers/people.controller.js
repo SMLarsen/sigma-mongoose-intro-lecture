@@ -45,7 +45,7 @@ myApp.controller('PeopleController', ['$http', function($http) {
           console.log('delete error:', response);
         }
       );
-    }
+    };
 
     // update person
     self.updatePerson = function(id) {
@@ -59,6 +59,6 @@ myApp.controller('PeopleController', ['$http', function($http) {
           console.log('update error:', response);
         }
       );
-    }
+    };
 
 }]);

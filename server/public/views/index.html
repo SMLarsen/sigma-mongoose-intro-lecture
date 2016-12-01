@@ -5,7 +5,6 @@
     <script type="text/javascript" src="/vendors/angular.min.js"></script>
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/controllers/people.controller.js"></script>
-
     <link rel="stylesheet" href="/vendors/bootstrap.min.css" />
 </head>
 <body ng-app="myApp">
@@ -19,10 +18,9 @@
                 <label for="location">Location: </label>
                 <input type="text" ng-model="peeps.newPerson.location" id="location" placeholder="Location" />
                 <label for="birthDate">Birth Date: </label>
-                <input type="text" ng-model="peeps.newPerson.birthDate" id="birthDate" placeholder="Birthdate" />
+                <input type="date" ng-model="peeps.newPerson.birthDate" id="birthDate" placeholder="Birthdate" />
                 <label for="nicenessLevel">Niceness: </label>
                 <select ng-model="peeps.newPerson.nicenessLevel" id="nicenessLevel"  ng-options="item for item in peeps.niceLevels" name="nicenessLevel"></select>
-                <!-- <input type="text" ng-model="peeps.newPerson.nicenessLevel" id="nicenessLevel" placeholder="Niceness" /> -->
                 <button class="btn btn-primary" ng-click="peeps.addPerson()">Add Person</button>
             </form>
             </div>
