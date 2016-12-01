@@ -21,7 +21,8 @@
                 <label for="birthDate">Birth Date: </label>
                 <input type="text" ng-model="peeps.newPerson.birthDate" id="birthDate" placeholder="Birthdate" />
                 <label for="nicenessLevel">Niceness: </label>
-                <input type="text" ng-model="peeps.newPerson.nicenessLevel" id="nicenessLevel" placeholder="Niceness" />
+                <select ng-model="peeps.newPerson.nicenessLevel" id="nicenessLevel"  ng-options="item for item in peeps.niceLevels" name="nicenessLevel"></select>
+                <!-- <input type="text" ng-model="peeps.newPerson.nicenessLevel" id="nicenessLevel" placeholder="Niceness" /> -->
                 <button class="btn btn-primary" ng-click="peeps.addPerson()">Add Person</button>
             </form>
             </div>
