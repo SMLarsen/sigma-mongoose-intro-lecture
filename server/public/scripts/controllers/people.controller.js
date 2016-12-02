@@ -49,7 +49,7 @@ myApp.controller('PeopleController', ['$http', function($http) {
 
     // update person
     self.updatePerson = function(id, person) {
-      console.log('update person');
+      console.log('update person', id, person);
       var data = person;
       $http.put('/person/' + id, data)
         .then(function(response) {
