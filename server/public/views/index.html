@@ -35,13 +35,13 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <div ng-repeat="person in peeps.people" class="well col-md-4 goodPeeps" ng-class="person.nicenessLevel">
+                    <div ng-repeat="person in peeps.people" class="well col-md-3 goodPeeps" ng-class="person.nicenessLevel">
                         <h4>{{person.name}} <button ng-click="peeps.deletePerson(person._id)" class="btn btn-danger pull-right peepDeleteButton"><i class="material-icons">delete_forever</i></button>
 </h4>
-                        <p>Lives in {{person.location}}
+                        <p>Home: {{person.location}}
                           <span class="editButton" ng-click="openModal()"><i class="material-icons">&#xE254;</i></span></p>
-                            <p>Born on {{person.birthDate | date}}</p>
-                            <p>Is {{person.nicenessLevel}}ly nice <span class="editButton" ng-click="openModal()"><i class="material-icons">&#xE254;</i></span>
+                            <p>Born: {{person.birthDate | date}}</p>
+                            <p>{{person.nicenessLevel}}ly Nice <span class="editButton" ng-click="openModal()"><i class="material-icons">&#xE254;</i></span>
                                 <modal-dialog show="modalShown" width="200px" height="80%">
                                     <label for="location">Change Location</label>
                                     <input type="text" ng-model="person.location" class="editLocation" name="location">
@@ -50,9 +50,12 @@
                                     <button ng-click="peeps.updatePerson(person._id, person)" class="btn btn-default peepUpdateButton">Update</button>
                                 </modal-dialog>
                             </p>
-                            <h5>Wish List</h5>
-                            <input type="text" ng-model="thing.thing" ><button ng-click="peeps.addGift(person._id, thing)" class="btn btn-default giftButton pull-right"><i class="material-icons">card_giftcard</i></button>
-                            <div class="wishList" ng-repeat="thing in person.wishlist"  > {{thing.thing}}</div>
+                            <div class="wishList">
+                              <h5>Wish List</h5>
+                              <input class="wishInput" type="text" ng-model="thing.thing" ><button ng-click="peeps.addGift(person._id, thing)" class="btn btn-default giftButton pull-right"><i class="material-icons">card_giftcard</i></button>
+                              <ul class="wishListItem" ng-repeat="thing in person.wishlist"  >
+                                 <li>{{thing.thing}}</li></ul>
+                            </div>
                     </div>
                 </div>
             </div>

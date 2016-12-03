@@ -2,12 +2,32 @@ body {
   background-color: #236328;
 }
 
-.goodPeeps {
+/*.goodPeeps {
   height: 300px;
+}*/
+
+h5 {
+  text-align: center;
+}
+
+.wishList {
+  background-color: #e6e9b0;
+  padding: 5px;
+  color: #236328;
+}
+
+.wishInput {
+  margin-left: 10px;
+  width: 50%;
+  margin-bottom: 10%;
 }
 
 .editButton, .giftButton {
   background-color: transparent;
+}
+
+.giftButton {
+  font-size: 4px;
 }
 
 .inputLabel {
@@ -26,7 +46,7 @@ body {
 }
 
 .goodPeeps {
-  border: 10px solid transparent;
+  border: 20px solid transparent;
   padding: 15px;
   margin: 10px;
   /*border-image: url(/assets/0a6d7537e0fb9127801f20546851b75b.jpg) 30 stretch;*/
@@ -34,22 +54,36 @@ body {
 
 .Angelic {
   border-image: url(/assets/5ea2aa1cdbc286a8626edb12dd3e2594.gif) 30 stretch;
+  background-color: #6cb573;
+  background-image: url(/assets/53a0acb008603217c1de20bde656d4d8.jpg);
+  background-position: center;
 }
 
 .Great {
   border-image: url(/assets/0a6d7537e0fb9127801f20546851b75b.jpg) 30 stretch;
+  background-color: #6cb573;
+  background-image: url(/assets/38494-Red-Christmas-Ornaments.jpg);
+  background-position: center;
 }
 
 .NotTooBad {
   background-color: #6cb573;
+  color: white;
+  background-image: url(/assets/1571025-background-of-the-christmas-tree-needles-lying-on-the-floor.jpg);
+  background-position: center;
 }
 
 .Weak {
   background-color: #ec9f39;
+  color: white;
+  background-image: url(/assets/78300.png);
+  background-position: center;
 }
 
 .DamnedToHell {
-  background-color: #e46161;
+  /*color: white;*/
+  background-image: url(/assets/Fire-Hell-MP900438774.jpg);
+  background-position: center;
 }
 
 .ng-modal-overlay {

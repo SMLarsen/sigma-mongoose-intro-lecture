@@ -12,8 +12,6 @@ myApp.controller('PeopleController', ['$http', function($http) {
         $http.get('/person')
             .then(function(response) {
                     self.people = response.data;
-                    self.wishLists = self.people.wishlist;
-                    console.log(self.wishLists);
                 },
                 function(response) {
                     console.log('get error:', response);
