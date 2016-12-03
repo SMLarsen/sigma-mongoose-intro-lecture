@@ -52,7 +52,7 @@
                             </p>
                             <h5>Wish List</h5>
                             <input type="text" ng-model="thing.thing" ><button ng-click="peeps.addGift(person._id, thing)" class="btn btn-default giftButton pull-right"><i class="material-icons">card_giftcard</i></button>
-                            <div class="wishList" ng-repeat="thing in peeps.people.wishlist"  > {{thing.thing}}</div>
+                            <div class="wishList" ng-repeat="thing in person.wishlist"  > {{thing.thing}}</div>
                     </div>
                 </div>
             </div>
