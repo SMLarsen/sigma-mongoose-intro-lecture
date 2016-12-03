@@ -2,7 +2,11 @@ body {
   background-color: #236328;
 }
 
-.editButton {
+.goodPeeps {
+  height: 300px;
+}
+
+.editButton, .giftButton {
   background-color: transparent;
 }
 

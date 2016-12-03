@@ -35,8 +35,9 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <div ng-repeat="person in peeps.people" class="well col-md-3 goodPeeps" ng-class="person.nicenessLevel">
-                        <h4>{{person.name}}</h4>
+                    <div ng-repeat="person in peeps.people" class="well col-md-4 goodPeeps" ng-class="person.nicenessLevel">
+                        <h4>{{person.name}} <button ng-click="peeps.deletePerson(person._id)" class="btn btn-danger pull-right peepDeleteButton"><i class="material-icons">delete_forever</i></button>
+</h4>
                         <p>Lives in {{person.location}}
                           <span class="editButton" ng-click="openModal()"><i class="material-icons">&#xE254;</i></span></p>
                             <p>Born on {{person.birthDate | date}}</p>
@@ -49,7 +50,9 @@
                                     <button ng-click="peeps.updatePerson(person._id, person)" class="btn btn-default peepUpdateButton">Update</button>
                                 </modal-dialog>
                             </p>
-                            <button ng-click="peeps.deletePerson(person._id)" class="btn btn-danger peepDeleteButton">Delete</button>
+                            <h5>Wish List</h5>
+                            <input type="text" ng-model="thing.thing" ><button ng-click="peeps.addGift(person._id, thing)" class="btn btn-default giftButton pull-right"><i class="material-icons">card_giftcard</i></button>
+                            <div class="wishList" ng-repeat="thing in peeps.people.wishlist"  > {{thing.thing}}</div>
                     </div>
                 </div>
             </div>

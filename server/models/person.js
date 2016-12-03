@@ -2,13 +2,13 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 // var XMasItem = require('./christmas.item');
 
-
+// console.log(XMasItem);
 // subdocument
 var christmasItem = new Schema({
   thing: { type: String, required: true }
 });
 
-
+// var christmasItem = mongoose.model('christmasItem', christmasItem);
 
 // step 1: create the Schema
 var personSchema = new Schema({

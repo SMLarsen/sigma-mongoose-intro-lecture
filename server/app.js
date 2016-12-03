@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var index = require('./routes/index');
 var people = require('./routes/people');
+var gift = require('./routes/gift');
 var mongoose = require('mongoose');
 
 
@@ -12,6 +13,7 @@ app.use(express.static(path.join(__dirname, './public')));
 app.use(bodyParser.json()); // needed for angular requests
 
 /** ---------- EXPRESS ROUTES ---------- **/
+app.use('/gift', gift);
 app.use('/person', people);
 app.use('/', index);
 
