@@ -35,7 +35,7 @@ router.put('/:id', function(req, res) {
   console.log('update location: ', req.body.location);
   Person.findByIdAndUpdate(
     { _id: req.params.id },
-    { $set: { location: req.body.location} },
+    { $set: { location: req.body.location, nicenessLevel: req.body.nicenessLevel} },
     function(err, data) {
       if(err) {
         console.log('Put ERR: ', err);

@@ -1,49 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Mongo Nice List!</title>
     <script type="text/javascript" src="/vendors/angular.min.js"></script>
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/directives/modalDialog.directive.js"></script>
     <script type="text/javascript" src="/scripts/controllers/people.controller.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/modalDialog.controller.js"></script>
     <link rel="stylesheet" href="/vendors/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/styles/styles.css" />
 </head>
+
 <body ng-app="myApp">
     <div class="container" ng-controller="PeopleController as peeps">
         <h1>Mongo Nice List!</h1>
         <div class="row">
             <div class="col-md-12">
-            <form>
-                <label class="inputLabel" for="name">Name: </label>
-                <input type="text" ng-model="peeps.newPerson.name" id="name" placeholder="Name" />
-                <label class="inputLabel" for="location">Location: </label>
-                <input type="text" ng-model="peeps.newPerson.location" id="location" placeholder="Location" />
-                <label class="inputLabel" for="birthDate">Birth Date: </label>
-                <input type="date" ng-model="peeps.newPerson.birthDate" id="birthDate" placeholder="Birthdate" />
-                <label class="inputLabel" for="nicenessLevel">Niceness: </label>
-                <select ng-model="peeps.newPerson.nicenessLevel" id="nicenessLevel"  ng-options="item for item in peeps.niceLevels" name="nicenessLevel"></select>
-                <button class="btn btn-primary" ng-click="peeps.addPerson()">Add Person</button>
-            </form>
+                <form>
+                    <label class="inputLabel" for="name">Name: </label>
+                    <input type="text" ng-model="peeps.newPerson.name" id="name" placeholder="Name" />
+                    <label class="inputLabel" for="location">Location: </label>
+                    <input type="text" ng-model="peeps.newPerson.location" id="location" placeholder="Location" />
+                    <label class="inputLabel" for="birthDate">Birth Date: </label>
+                    <input type="date" ng-model="peeps.newPerson.birthDate" id="birthDate" placeholder="Birthdate" />
+                    <label class="inputLabel" for="nicenessLevel">Niceness: </label>
+                    <select ng-model="peeps.newPerson.nicenessLevel" id="nicenessLevel" ng-options="item for item in peeps.niceLevels" name="nicenessLevel"></select>
+                    <button class="btn btn-primary" ng-click="peeps.addPerson()">Add Person</button>
+                </form>
             </div>
         </div>
+        <div ng-controller="MyCtrl">
 
         <div class="row">
-          <div class="col-md-12">
-              <div ng-repeat="person in peeps.people" class="well col-md-3 goodPeeps" ng-class="person.nicenessLevel">
-                <h4>{{person.name}}</h4>
-                <label class="peepLabel" for="peepLocation">Lives in </label>
-                <input type="text" name="peepLocation" ng-model="person.location">
-                <p>Born on {{person.birthDate | date}}</p>
-                <p>Is {{person.nicenessLevel}}ly nice </p>
-                <div class="peepButtons">
-                  <button ng-click="peeps.updatePerson(person._id, person)" class="btn btn-default peepButton">Update</button>
-                  <button ng-click="peeps.deletePerson(person._id)" class="btn btn-danger">Delete</button>
+            <div class="col-md-12">
+                <div ng-repeat="person in peeps.people" class="well col-md-3 goodPeeps" ng-class="person.nicenessLevel">
+                    <h4>{{person.name}}</h4>
+                    <label class="peepLabel" for="peepLocation">Lives in </label>
+                    <input type="text" name="peepLocation" ng-model="person.location">
+                    <p>Born on {{person.birthDate | date}}</p>
+                      <p>Is {{person.nicenessLevel}}ly nice <span class="editButton" ng-click="openEditModal()"><i class="material-icons">&#xE254;</i></span>
+                      <modal-dialog show="modalShown" width="200px" height="30%">
+                        <label for="nicenessLevel">Change Niceness</label>
+                        <select ng-model="person.nicenessLevel" ng-change="peeps.updatePerson(person._id, person)" class="editNicenessLevel" ng-options="item for item in peeps.niceLevels" name="nicenessLevel"></select>
+                        <!-- <button class="btn btn-default" ng-click="peeps.updatePerson()">Update</button> -->
+                      </modal-dialog></p>
+                    <div class="peepButtons">
+                        <!-- <button ng-click="peeps.updatePerson(person._id, person)" class="btn btn-default peepButton">Update</button> -->
+                        <button ng-click="peeps.deletePerson(person._id)" class="btn btn-danger">Delete</button>
+                    </div>
                 </div>
             </div>
-          </div>
         </div>
+      </div>
 
     </div>
 
 </body>
+
 </html>
