@@ -31,25 +31,23 @@
                 </form>
             </div>
         </div>
-        <div ng-controller="MyCtrl">
+        <div ng-controller="ModalDialogController">
 
         <div class="row">
             <div class="col-md-12">
                 <div ng-repeat="person in peeps.people" class="well col-md-3 goodPeeps" ng-class="person.nicenessLevel">
                     <h4>{{person.name}}</h4>
-                    <label class="peepLabel" for="peepLocation">Lives in </label>
-                    <input type="text" name="peepLocation" ng-model="person.location">
+                    <p>Lives in {{person.location}} <span class="editButton" ng-click="openModal()"><i class="material-icons">&#xE254;</i></span>
                     <p>Born on {{person.birthDate | date}}</p>
-                      <p>Is {{person.nicenessLevel}}ly nice <span class="editButton" ng-click="openEditModal()"><i class="material-icons">&#xE254;</i></span>
-                      <modal-dialog show="modalShown" width="200px" height="30%">
+                    <p>Is {{person.nicenessLevel}}ly nice <span class="editButton" ng-click="openModal()"><i class="material-icons">&#xE254;</i></span>
+                      <modal-dialog show="modalShown" width="200px" height="80%">
+                        <label for="location">Change Location</label>
+                        <input type="text" ng-model="person.location" class="editLocation" name="location">
                         <label for="nicenessLevel">Change Niceness</label>
-                        <select ng-model="person.nicenessLevel" ng-change="peeps.updatePerson(person._id, person)" class="editNicenessLevel" ng-options="item for item in peeps.niceLevels" name="nicenessLevel"></select>
-                        <!-- <button class="btn btn-default" ng-click="peeps.updatePerson()">Update</button> -->
+                        <select ng-model="person.nicenessLevel" class="editNicenessLevel" ng-options="item for item in peeps.niceLevels" name="nicenessLevel"></select>
+                        <button ng-click="peeps.updatePerson(person._id, person)" class="btn btn-default peepUpdateButton">Update</button>
                       </modal-dialog></p>
-                    <div class="peepButtons">
-                        <!-- <button ng-click="peeps.updatePerson(person._id, person)" class="btn btn-default peepButton">Update</button> -->
-                        <button ng-click="peeps.deletePerson(person._id)" class="btn btn-danger">Delete</button>
-                    </div>
+                        <button ng-click="peeps.deletePerson(person._id)" class="btn btn-danger peepDeleteButton">Delete</button>
                 </div>
             </div>
         </div>

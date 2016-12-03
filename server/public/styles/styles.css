@@ -11,18 +11,14 @@ body {
   color: white;
 }
 
-.peepLabel {
-  width: 60px;
-  margin-right: 10px;
-  margin-bottom: 15px;
+.peepDeleteButton {
+  margin-left: 25%;
+  margin-top: 5px;
 }
 
-.peepButtons {
-  margin-top: 20px;
-}
-
-.peepButton {
-  margin-left: 40px;
+.peepUpdateButton {
+  /*margin-top: 10%;*/
+  margin: 10% 25%;
 }
 
 .goodPeeps {
