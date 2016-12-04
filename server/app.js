@@ -22,11 +22,11 @@ var databaseUri = 'mongodb://localhost:27017/sigma';
 mongoose.connect(databaseUri);
 
 mongoose.connection.on('connected', function() {
-  console.log('mongoose connected to ', databaseUri);
+    console.log('mongoose connected to ', databaseUri);
 });
 
 mongoose.connection.on('error', function(err) {
-  console.log('mongoose connection error: ', err);
+    console.log('mongoose connection error: ', err);
 });
 
 /** ---------- START SERVER ---------- **/

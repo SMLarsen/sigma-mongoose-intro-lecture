@@ -1,3 +1,5 @@
+// Controller to manage person and gift list
+
 myApp.controller('PeopleController', ['$http', function($http) {
     var self = this;
     self.people = [];
@@ -71,7 +73,7 @@ myApp.controller('PeopleController', ['$http', function($http) {
                 function(response) {
                     console.log('add gift error:', response);
                 }
-        );
+            );
     };
 
 }]);

@@ -1,9 +1,11 @@
-myApp.controller('ModalDialogController', ['$scope', function($scope) {
-  var self = this;
-  $scope.modalShown = false;
+// Controller to manage edit modal dialog
 
-  $scope.openModal = function() {
-    this.modalShown = true;
-  };
+myApp.controller('ModalDialogController', ['$scope', function($scope) {
+    var self = this;
+    $scope.modalShown = false;
+
+    $scope.openModal = function() {
+        this.modalShown = true;
+    };
 
 }]);

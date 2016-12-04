@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 // bring in our mongoose model
 var Person = require('../models/person');
-var XMasItem = require('../models/christmas.item');
+// var XMasItem = require('../models/christmas.item');
 
 router.post('/', function(req, res) {
   console.log('post: ', req.body);

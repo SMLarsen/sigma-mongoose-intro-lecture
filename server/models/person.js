@@ -2,29 +2,32 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 // var XMasItem = require('./christmas.item');
 
-// console.log(XMasItem);
-// subdocument
+// christmas list subdocument schema
 var christmasItem = new Schema({
-  thing: { type: String, required: true }
+    thing: {
+        type: String,
+        required: true
+    }
 });
 
-// var christmasItem = mongoose.model('christmasItem', christmasItem);
-
-// step 1: create the Schema
+// person schema
 var personSchema = new Schema({
-  name: {type: String, required: true},
-  location: String,
-  birthDate: Date,
-  nicenessLevel: String,
-  wishlist: [christmasItem]
+    name: {
+        type: String,
+        required: true
+    },
+    location: String,
+    birthDate: Date,
+    nicenessLevel: String,
+    wishlist: [christmasItem]
 });
 
 personSchema.pre('save', function(next) {
-  next();
+    next();
 });
 
-// step 2 - create the model
+// sPerson model
 var Person = mongoose.model('Person', personSchema);
 
-// step 3 - export our model
+// Export model
 module.exports = Person;

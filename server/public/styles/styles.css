@@ -1,125 +1,131 @@
 body {
-  background-color: #236328;
+    background-color: #236328;
 }
 
 h5 {
-  text-align: center;
+    text-align: center;
 }
 
 .wishList {
-  background-color: #e6e9b0;
-  padding: 5px;
-  color: #236328;
+    background-color: #e6e9b0;
+    padding: 5px;
+    color: #236328;
 }
 
 .wishInput {
-  margin-left: 10px;
-  width: 50%;
-  margin-bottom: 10%;
+    margin-left: 10px;
+    width: 50%;
+    margin-bottom: 10%;
 }
 
 .editButton, .giftButton {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 .giftButton {
-  font-size: 4px;
+    font-size: 4px;
 }
 
 .inputLabel {
-  margin: 10px 0;
-  color: white;
+    margin: 10px 0;
+    color: white;
 }
 
 .peepDeleteButton {
-  margin-left: 25%;
-  margin-top: 5px;
+    margin-left: 25%;
+    margin-top: 5px;
 }
 
 .peepUpdateButton {
-  /*margin-top: 10%;*/
-  margin: 10% 25%;
+    /*margin-top: 10%;*/
+    margin: 10% 25%;
 }
 
 .goodPeeps {
-  border: 20px solid transparent;
-  padding: 15px;
-  margin: 10px;
+    border: 20px solid transparent;
+    padding: 15px;
+    margin: 10px;
 }
 
+/* =================== Styling of niceness states ===================*/
+
 .Angelic {
-  border-image: url(/assets/5ea2aa1cdbc286a8626edb12dd3e2594.gif) 30 stretch;
-  background-color: #6cb573;
-  background-image: url(/assets/53a0acb008603217c1de20bde656d4d8.jpg);
-  background-position: center;
+    border-image: url(/assets/5ea2aa1cdbc286a8626edb12dd3e2594.gif) 30 stretch;
+    background-color: #6cb573;
+    background-image: url(/assets/53a0acb008603217c1de20bde656d4d8.jpg);
+    background-position: center;
 }
 
 .Great {
-  border-image: url(/assets/0a6d7537e0fb9127801f20546851b75b.jpg) 30 stretch;
-  background-color: #6cb573;
-  background-image: url(/assets/38494-Red-Christmas-Ornaments.jpg);
-  background-position: center;
+    border-image: url(/assets/0a6d7537e0fb9127801f20546851b75b.jpg) 30 stretch;
+    background-color: #6cb573;
+    background-image: url(/assets/38494-Red-Christmas-Ornaments.jpg);
+    background-position: center;
 }
 
 .NotTooBad {
-  background-color: #6cb573;
-  color: white;
-  background-image: url(/assets/1571025-background-of-the-christmas-tree-needles-lying-on-the-floor.jpg);
-  background-position: center;
+    background-color: #6cb573;
+    color: white;
+    background-image: url(/assets/1571025-background-of-the-christmas-tree-needles-lying-on-the-floor.jpg);
+    background-position: center;
 }
 
 .Weak {
-  background-color: #ec9f39;
-  color: white;
-  background-image: url(/assets/78300.png);
-  background-position: center;
+    background-color: #ec9f39;
+    color: white;
+    background-image: url(/assets/78300.png);
+    background-position: center;
 }
 
 .DamnedToHell {
-  /*color: white;*/
-  background-image: url(/assets/Fire-Hell-MP900438774.jpg);
-  background-position: center;
+    /*color: white;*/
+    background-image: url(/assets/Fire-Hell-MP900438774.jpg);
+    background-position: center;
 }
+
+/* =================== Styling of edit modal dialog ===================*/
 
 .ng-modal-overlay {
-  /* A dark translucent div that covers the whole screen */
-  position:absolute;
-  z-index:9999;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background-color:#000000;
-  opacity: 0.8;
+    /* A dark translucent div that covers the whole screen */
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.8;
 }
+
 .ng-modal-dialog {
-  /* A centered div above the overlay with a box shadow. */
-  z-index:10000;
-  position: absolute;
-  width: 50%; /* Default */
-
-  /* Center the dialog */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-
-  background-color: #fff;
-  box-shadow: 4px 4px 80px #000;
+    /* A centered div above the overlay with a box shadow. */
+    z-index: 10000;
+    position: absolute;
+    width: 50%;
+    /* Default */
+    /* Center the dialog */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 4px 4px 80px #000;
 }
+
 .ng-modal-dialog-content {
-  padding:10px;
-  text-align: left;
+    padding: 10px;
+    text-align: left;
 }
+
 .ng-modal-close {
-  position: absolute;
-  top: 3px;
-  right: 5px;
-  padding: 5px;
-  cursor: pointer;
-  font-size: 120%;
-  display: inline-block;
-  font-weight: bold;
-  font-family: 'arial', 'sans-serif';
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 120%;
+    display: inline-block;
+    font-weight: bold;
+    font-family: 'arial', 'sans-serif';
 }
